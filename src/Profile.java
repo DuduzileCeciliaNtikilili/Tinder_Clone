@@ -1,10 +1,12 @@
 public class Profile {
 
+     // Ican create Instance variables and am able to use another class type variable in another class
     //Fields:
-    Person person;
-    Image[] images = new Image [3];
-    int imageNumber = 0;
+    private Person person;
+    private Image[] images = new Image [3];
+    private int imageNumber = 2;
 
+    // I am able to create contructors and understand what a constructor does
     //Constructor:
     Profile(Person person, Image image1, Image image2, Image image3) {
         this.person = person;
@@ -13,9 +15,12 @@ public class Profile {
         images[2] = image3;
 
     }
-
-    public Person getPerson() {
-        return person;
+    // I know how to create a toString() function
+    // I know what a toString() function does
+    //Methods:
+    @Override
+    public String toString() {
+        return person + "\n" + nextImage();
     
     }
     public Image nextImage() {
@@ -24,20 +29,39 @@ public class Profile {
         } else {
             imageNumber++;
         }
-        System.out.println(images[imageNumber]);
         return images[imageNumber];
 
         }
 
-    public String toString() {
-        return "Profile{" +
-        "person=" + person +
-        ", images=" +Arrays.toString(images) +
-        '}';
+    //Setters:
+    public void setPerson(Person person) {
+        this.person = person;
+
     }
-        }
+
+    public void setImages(Image[] images) {
+        this.images = images;
+
     }
+
+    public void setImageNumber(int imageNumber) {
+        this.imageNumber = imageNumber;
+
+    }
+
+    // Getters:
+    public Person getPerson() {
+        return person;
 
     }
     
+    public Image[] getImages() {
+        return image;
+
+    }
+
+    public int getImageNumber() {
+        return imageNumber;
+
+    }
 }

@@ -44,12 +44,7 @@ public class TinderSwipe {
         return profile;
         
     }
-    }
-        }
-        }
-        }
-    }
-    }
+
 
     
     

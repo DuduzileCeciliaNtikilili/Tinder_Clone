@@ -1,24 +1,32 @@
 public class Image {
 
+     // I can create Instance variables and am able to use another class type variable in another class
     //Fields:
+    private String url;
+    private String description;
+    private String title;
+    private String tags; //Array
 
-    String url;
-    String description;
-    String title;
-    String tags; //Array
-
+    // I am able to create contructors and understand what a constructor does
     //Constructor:
-    Image(String url, String description, String title, String tags) {
+    public Image(String url, String description, String title, String tags) {
         this.url = url;
         this.description = description;
         this.title = title;
         this.tags = tags;
 
-    //Methods : behaviour
-    public void setUrl(String url) {
-        this.url = url;
     }
+     // I know how to create a toString() function
+    // I know what a toString() function does
+    //Methods:
+    @Override
+    public String toString() {
+        return title + "\n" + description + "\nURL = " + url + "\nTags='" + tags;
 
+    }
+     // I know to create setters and gatters
+     //I know why i am creatiing setters & gatter
+    //Setters:
     public void setDescription(String description) {
         this.description = description;
 
@@ -36,28 +44,24 @@ public class Image {
 
 
     //getters
-    public String geturl(){
+    public String getUrl() {
         return url;
-    {
 
-    public String getdescription(){
+    }
+
+    public String getDescription() {
         return description;
-    {
 
-    public String gettitle(){
+    }
+
+    public String geTtitle() {
         return title;
-    {
 
-    public String gettags(){
+    }
+
+    public String getTags() {
        return tags;
-    }
 
-    public String toString() {
-        return "Image{" +
-        "url='" = url + '/'' +
-        ", description='" + description + '/''+
-        ", title='" + title + '/''+
-        ", tags='" + tags + '/''+
-        '}';
     }
+}
     
